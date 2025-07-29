@@ -1,0 +1,70 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.scrap-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.scrap-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 220px;
+}
+
+.scrap-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.scrap-card input {
+  width: 80%;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.scrap-card button {
+  background-color: #34d399;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.total-box {
+  background: white;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.total-box button {
+  background-color: #4f46e5;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

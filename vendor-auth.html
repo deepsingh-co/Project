@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vendor Login - Scrap Uncle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-left" style="background: linear-gradient(135deg, #f1f8e9, #ffffff);">
+      <h1>♻ Scrap <span>Uncle</span></h1>
+      <p>Hello Vendor! Let's start collecting</p>
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/recycling-worker-5431452-4530982.png" alt="Vendor"/>
+    </div>
+
+    <div class="auth-right">
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('login')">Login</button>
+        <button class="tab" onclick="switchTab('signup')">Signup</button>
+      </div>
+
+      <form id="login-form" class="form active-form">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" required>
+        </div>
+        <button class="submit-btn">Login</button>
+      </form>
+
+      <form id="signup-form" class="form">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" required>
+        </div>
+        <div class="input-group">
+          <label>Confirm Password</label>
+          <input type="password" required>
+        </div>
+        <button class="submit-btn">Signup</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

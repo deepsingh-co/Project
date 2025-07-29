@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scrap Uncle - Select Scrap</title>
+  <link rel="stylesheet" href="scrap.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>♻ Scrap Uncle</h1>
+    <h2>Select Your Scrap</h2>
+
+    <div class="scrap-list">
+      <div class="scrap-card" data-price="10">
+        <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Paper">
+        <h3>Paper Scrap</h3>
+        <input type="number" placeholder="Weight in kg" min="1">
+        <button onclick="addToCart(this)">Add</button>
+      </div>
+
+      <div class="scrap-card" data-price="15">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="Plastic">
+        <h3>Plastic Scrap</h3>
+        <input type="number" placeholder="Weight in kg" min="1">
+        <button onclick="addToCart(this)">Add</button>
+      </div>
+
+      <div class="scrap-card" data-price="20">
+        <img src="https://cdn-icons-png.flaticon.com/512/2554/2554971.png" alt="Metal">
+        <h3>Metal Scrap</h3>
+        <input type="number" placeholder="Weight in kg" min="1">
+        <button onclick="addToCart(this)">Add</button>
+      </div>
+    </div>
+
+    <div class="total-box">
+      <p>Items Total: ₹<span id="itemTotal">0</span></p>
+      <p>Service Charge: ₹10</p>
+      <h3>Grand Total: ₹<span id="grandTotal">10</span></h3>
+      <button onclick="proceed()">Proceed to Time Slot ➡</button>
+    </div>
+  </div>
+
+  <script src="scrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scrap Uncle - Choose Role</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="role-container">
+    <div class="brand-header">
+      <h1>♻ Scrap <span>Uncle</span></h1>
+      <p>Select your role to continue</p>
+    </div>
+
+    <div class="role-cards">
+      <div class="role-card" onclick="selectRole('customer')">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Customer" />
+        <h3>Customer</h3>
+      </div>
+      <div class="role-card" onclick="selectRole('vendor')">
+        <img src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="Vendor" />
+        <h3>Vendor</h3>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectRole(role) {
+      if (role === 'customer') {
+        window.location.href = 'customer-auth.html';
+      } else if (role === 'vendor') {
+        window.location.href = 'vendor-auth.html';
+      }
+    }
+  </script>
+</body>
+</html>
