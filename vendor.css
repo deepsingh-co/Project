@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #fdfcfc, #e3e8f0);
+  color: #333;
+}
+
+.header {
+  background: linear-gradient(to right, #5f72bd, #9b23ea);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffd700;
+}
+
+.nav {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tab {
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.tab:hover,
+.tab.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.vendor-name {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.main-content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.main-content h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #444;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Glassmorphism Order Cards */
+.order-card {
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease-in-out;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.accept, .reject {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  flex: 1;
+  min-width: 120px;
+  transition: 0.3s ease;
+}
+
+.accept {
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  color: white;
+}
+
+.reject {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  color: white;
+}
+
+.accept:hover,
+.reject:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 20px 10px;
+  }
+
+  .main-content h2 {
+    font-size: 20px;
+  }
+
+  .order-card p {
+    font-size: 14px;
+  }
+
+  .card-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .accept, .reject {
+    width: 100%;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

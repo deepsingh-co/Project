@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scrap Pickup - Time Slot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="slot.css" />
+</head>
+<body>
+  <div class="glass-card">
+    <h1>📦 Schedule Your Pickup</h1>
+    <p class="amount">Total: ₹<span id="amountDisplay">0</span> (incl. ₹10 service)</p>
+
+    <label for="pickupDate">📅 Select Date:</label>
+    <input type="date" id="pickupDate" class="input-date" />
+
+    <h2>Choose a Time Slot</h2>
+    <div class="slots-container">
+      <div class="slot-card">9:00 - 11:00 AM</div>
+      <div class="slot-card">11:00 - 1:00 PM</div>
+      <div class="slot-card">1:00 - 3:00 PM</div>
+      <div class="slot-card">3:00 - 5:00 PM</div>
+      <div class="slot-card">5:00 - 7:00 PM</div>
+    </div>
+
+    <textarea placeholder="📝 Add Address or Note" class="address-box"></textarea>
+    <button class="proceed-btn" onclick="confirmSlot()">Confirm & Continue</button>
+  </div>
+
+  <script src="slot.js"></script>
+</body>
+</html>

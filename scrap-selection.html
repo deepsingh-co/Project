@@ -33,15 +33,32 @@
         <input type="number" placeholder="Weight in kg" min="1">
         <button onclick="addToCart(this)">Add</button>
       </div>
+
+      <!-- Custom Scrap Add -->
+      <div class="custom-scrap">
+        <h2>Add Custom Scrap</h2>
+        <input type="text" id="customName" placeholder="Custom Scrap Name">
+        <input type="number" id="customPrice" placeholder="Price per kg (₹)" min="1">
+        <input type="number" id="customWeight" placeholder="Weight (kg)" min="1">
+        <button onclick="addCustomScrap()">Add Custom Scrap</button>
+      </div>
+ 
     </div>
 
     <div class="total-box">
       <p>Items Total: ₹<span id="itemTotal">0</span></p>
       <p>Service Charge: ₹10</p>
       <h3>Grand Total: ₹<span id="grandTotal">10</span></h3>
-      <button onclick="proceed()">Proceed to Time Slot ➡</button>
+      <button onclick="proceed() ">Proceed to Time Slot ➡</button>
     </div>
-  </div>
+    <div class="custom-scrap">
+      <h2>Add Custom Scrap</h2>
+      <input type="text" id="customName" placeholder="Scrap Name (e.g. Copper wire)">
+      <input type="number" id="customWeight" placeholder="Weight in kg" min="1">
+      <input type="number" id="customRate" placeholder="Rate per kg (₹)" min="1">
+      <button onclick="addCustomScrap()">Add Custom Scrap</button>
+    </div>
+
 
   <script src="scrap.js"></script>
 </body>
