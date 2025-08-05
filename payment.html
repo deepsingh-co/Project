@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Confirmed</title>
+  <link rel="stylesheet" href="payment.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="confirmation-container">
+    <div class="checkmark-wrapper">
+      <div class="checkmark-circle">
+        <svg class="checkmark" viewBox="0 0 52 52">
+          <path class="checkmark__check" fill="none" d="M14 27l10 10 16-20"/>
+        </svg>
+      </div>
+    </div>
+
+    <h1>Order Confirmed</h1>
+    <p class="subtitle">Vendor will pay you at the time of pickup.</p>
+
+   <div class="summary-box">
+  <h2>✅ Order Confirmed</h2>
+  <p><strong>Pickup Date:</strong> <span id="pickupDateDisplay">--</span></p>
+  <p><strong>Time Slot:</strong> <span id="pickupTimeDisplay">--</span></p>
+  <p><strong>Address / Note:</strong> <span id="pickupNoteDisplay">--</span></p>
+  <p><strong>Total Scrap Value:</strong> ₹<span id="scrapAmountDisplay">--</span></p>
+  <p class="thank-you-text">Vendor will pay you the above amount on pickup.</p>
+</div>
+
+    <a href="index.html" class="home-btn">🏠 Return to Home</a>
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>

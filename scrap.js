@@ -17,10 +17,18 @@ function addToCart(button) {
 
   updateTotals();
 
+  document.getElementById("itemTotal").textContent = itemTotal.toFixed(2);
+  document.getElementById("grandTotal").textContent = (itemTotal + serviceCharge).toFixed(2);
+
+  // ✅ Save to localStorage
+  localStorage.setItem("scrapAmount", (itemTotal + serviceCharge).toFixed(2));
+
   input.value = '';
   button.textContent = "Added ✓";
   button.disabled = true;
-  button.style.backgroundColor = "#9ca3af"; // grey out
+  button.style.backgroundColor = "#9ca3af";
+
+ 
 }
 
 function addCustomScrap() {
