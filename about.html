@@ -3,41 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Scrap Uncle</title>
+  <title>About | Scrap Uncle</title>
   <link rel="stylesheet" href="about.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>♻ Scrap <span>Uncle</span></h1>
-    <nav>
+  <!-- SVG ICONS (defs) -->
+  <svg width="0" height="0" class="hidden">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#22c55e"/>
+        <stop offset="100%" stop-color="#16a34a"/>
+      </linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#60a5fa"/>
+        <stop offset="100%" stop-color="#4f46e5"/>
+      </linearGradient>
+      <symbol id="icon-leaf" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M5 21q2.9 0 5.4-1.1q2.5-1.1 4.3-2.9t2.9-4.3Q19 9.2 19 6q0-1.05-.725-1.775T16.5 3q-3.2 0-6.05 1.1T5 6.9Q3.2 8.7 2.1 11.55T1 17q0 1.05.725 1.775T3.5 19q1.3 0 2.475-.312T8.2 18l3.6-3.6q.3-.3.3-.7t-.3-.7q-.3-.3-.7-.3t-.7.3L7.5 16.1q-1.05.7-2.25 1.05T3.5 17Q3 14.35 4.113 11.988T7.4 7.9q1.95-1.95 4.313-3.063T16.5 3q.5 2.65-.613 5.013T12.6 12q-1.95 1.95-4.313 3.063T3.5 16.5" />
+      </symbol>
+      <symbol id="icon-recycle" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M6.2 14.7 4 18.5l-2-1.2l2.2-3.8l2 1.2zm4.3-9.9l2.1-3.6l1.9 1.1l-2.1 3.6l-1.9-1.1zM22 12l-2.1 3.6l-1.9-1.1L20.1 11l1.9 1zM8 5l2 3.5H6L8 5zm2 14l-2-3.5h4L10 19zm8-7h-4l2-3.5L18 12z"/>
+      </symbol>
+      <symbol id="icon-earth" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20a10 10 0 0 0 0-20Zm6.93 8h-3.04a8.06 8.06 0 0 0-1.13-3.07A8.04 8.04 0 0 1 18.93 10ZM8.24 7.12A8.06 8.06 0 0 0 7.11 10H4.07a8.04 8.04 0 0 1 4.17-4.07c0 .4 0 .79 0 1.19ZM4.07 14h3.04c.23 1.08.62 2.1 1.13 3.07A8.04 8.04 0 0 1 4.07 14Zm7.93 5.93A8.05 8.05 0 0 1 9.8 14h4.4a8.05 8.05 0 0 1-2.2 5.93ZM9.8 10A8.05 8.05 0 0 1 12 4.07A8.05 8.05 0 0 1 14.2 10H9.8Zm6.09 7.07A8.06 8.06 0 0 0 16.89 14h3.04a8.04 8.04 0 0 1-4.04 3.07Z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Floating SVG Icons -->
+  <div class="float-wrap">
+    <span class="float f1"><svg><use href="#icon-leaf"/></svg></span>
+    <span class="float f2"><svg><use href="#icon-earth"/></svg></span>
+    <span class="float f3"><svg><use href="#icon-recycle"/></svg></span>
+    <span class="float f4"><svg><use href="#icon-leaf"/></svg></span>
+    <span class="float f5"><svg><use href="#icon-earth"/></svg></span>
+  </div>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">♻</div>
+      <div class="brand-text">Scrap <span>Uncle</span></div>
+    </div>
+    <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+      <a class="active" href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="about">
-    <div class="about-text">
-      <h2>Who Are We?</h2>
-      <p>
-        Scrap Uncle is a modern solution to an old problem — managing scrap waste efficiently. We connect customers who want to sell their scrap with verified vendors in real-time. With our easy-to-use platform, you can book a pickup, choose your time slot, and receive instant payment.
-      </p>
-      <h3>Why Choose Us?</h3>
-      <ul>
-        <li>✅ Verified local vendors within 2 km</li>
-        <li>✅ Transparent pricing with service charges</li>
-        <li>✅ Real-time order tracking & notification</li>
-        <li>✅ Custom scrap option for anything you want to sell</li>
-      </ul>
-    </div>
-    <div class="about-img">
-      <img src="https://cdn-icons-png.flaticon.com/512/3388/3388645.png" alt="Scrap Illustration" />
+  <!-- Hero -->
+  <section class="hero fade-in">
+    <h1>Turning <span class="grad">Scrap</span> into <span class="grad">Value</span></h1>
+    <p>We connect households with verified recycling vendors — fair payouts, easy pickups, and real environmental impact.</p>
+    <div class="stats">
+      <div class="stat-card">
+        <h3>10K+</h3><p>Pickups</p>
+      </div>
+      <div class="stat-card">
+        <h3>1.2K Tons</h3><p>Recycled</p>
+      </div>
+      <div class="stat-card">
+        <h3>4.9★</h3><p>User Rating</p>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Scrap Uncle. All rights reserved.</p>
+  <!-- Content -->
+  <main class="content">
+    <section class="glass card slide-left">
+      <h2>Our Mission</h2>
+      <p>Build India’s most trusted scrap-to-recycle network that is simple, transparent, and rewarding for every household.</p>
+    </section>
+
+    <section class="glass grid">
+      <div class="card slide-left">
+        <h3>How It Works</h3>
+        <ul class="list">
+          <li>Choose scrap items & get instant estimate</li>
+          <li>Select a convenient pickup date & time</li>
+          <li>Verified vendor collects & <b>pays you</b> on pickup</li>
+        </ul>
+      </div>
+      <div class="card slide-right">
+        <h3>Why Choose Us</h3>
+        <ul class="list">
+          <li>Fair pricing & instant payout</li>
+          <li>Eco-friendly, compliant recycling</li>
+          <li>Live vendor tracking & support</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta glass fade-in">
+      <h2>Join the Green Movement</h2>
+      <p>Every pickup you schedule saves resources and keeps waste out of landfills.</p>
+      <a class="btn" href="scrap.html">Start Selling Scrap</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer fade-in">
+    <p>© 2025 Scrap Uncle • Made with care for the planet</p>
   </footer>
+
+  <script src="about.js"></script>
 </body>
 </html>
