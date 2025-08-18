@@ -24,13 +24,22 @@
       <div class="slot-card">5:00 - 7:00 PM</div>
     </div>
 
-    <textarea placeholder="📝 Add Address or Note" class="address-box"></textarea>
+    <input id="pickupAddress" class="address-box" placeholder="Enter your pickup address" type="text" />
+
+
+    <!-- <textarea placeholder="📝 Add Address or Note" class="address-box"></textarea> -->
     <button class="proceed-btn" onclick="confirmSlot()">Confirm & Continue</button>
   </div>
 <script src="slot.js">
   
 </script>
-
+<!-- Google map api has used-->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+<script>
+  window.onload = function () {
+    initAutocomplete(); // address suggestion ke liye
+  }
+</script>
 
 </body>
 </html>

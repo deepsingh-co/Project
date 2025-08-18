@@ -1,61 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vendor Dashboard - Scrap Uncle</title>
-  <link rel="stylesheet" href="vendor.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor.css">
+  <script async
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">♻ Scrap <span>Uncle</span></div>
-    <nav class="nav">
-      <span class="tab active">Orders</span>
-      <span class="tab">History</span>
-      <span class="tab logout">Logout</span>
-    </nav>
-    <div class="vendor-name">Welcome, Vendor Name</div>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>♻ RE <span>cyo</span></h1>
+    <ul>
+      <li class="active" onclick="showSection('orders')">Orders</li>
+      <li onclick="showSection('history')">Order History</li>
+      <li onclick="showSection('profile')">Profile</li>
+      <li>Logout</li>
+    </ul>
+  </nav>
 
-  <main class="main-content">
-    <h2>New Pickup Requests</h2>
-    <div class="order-list">
-      <!-- Order Card 1 -->
-      <div class="order-card glass">
-        <p><strong>Customer:</strong> Rohan</p>
-        <p><strong>Scrap Type:</strong> Plastic, Paper</p>
-        <p><strong>Approx Weight:</strong> 4kg</p>
-        <p><strong>Time Slot:</strong> 9:00 – 11:00 AM</p>
-        <div class="card-buttons">
-          <button class="accept">Accept</button>
-          <button class="reject">Reject</button>
+  <div class="dashboard-container">
+    
+    <!-- Orders Section -->
+    <section id="orders" class="page-section active">
+      <h2>📦 New Orders</h2>
+      <div class="orders-grid">
+        <div class="order-card">
+          <h3>Customer: Anurudh Singh</h3>
+          <p><b>Date:</b> 17 Aug 2025</p>
+          <p><b>Time Slot:</b> 10:00 AM - 12:00 PM</p>
+          <p><b>Address:</b> Connaught Place, New Delhi</p>
+          <p><b>Total Scrap Value:</b> ₹450</p>
+          <div class="actions">
+            <button class="accept">✅ Accept</button>
+            <button class="reject">❌ Reject</button>
+          </div>
         </div>
       </div>
-      <!-- Order Card 2 -->
-      <div class="order-card glass">
-        <p><strong>Customer:</strong> Priya</p>
-        <p><strong>Scrap Type:</strong> Iron, Glass</p>
-        <p><strong>Approx Weight:</strong> 8kg</p>
-        <p><strong>Time Slot:</strong> 11:30 – 1:00 PM</p>
-        <div class="card-buttons">
-          <button class="accept">Accept</button>
-          <button class="reject">Reject</button>
-        </div>
-      </div>
-      <!-- Order Card 3 -->
-      <div class="order-card glass">
-        <p><strong>Customer:</strong> Aman</p>
-        <p><strong>Scrap Type:</strong> Aluminum, E-Waste</p>
-        <p><strong>Approx Weight:</strong> 6kg</p>
-        <p><strong>Time Slot:</strong> 2:00 – 4:00 PM</p>
-        <div class="card-buttons">
-          <button class="accept">Accept</button>
-          <button class="reject">Reject</button>
-        </div>
-      </div>
-    </div>
-  </main>
+    </section>
+<!--For api call -->
+    <section id="tracking">
+      <h2>📍 Live Vendor Tracking</h2>
+      <div id="map"></div>
+    </section>
 
-  <script src="vendor.js"></script>
+
+    <!-- Order History Section -->
+    <section id="history" class="page-section">
+      <h2>📜 Order History</h2>
+      <div class="orders-grid">
+        <div class="order-card">
+          <h3>Customer: Swayam</h3>
+          <p><b>Date:</b> 10 Aug 2025</p>
+          <p><b>Time Slot:</b> 2:00 PM - 4:00 PM</p>
+          <p><b>Address:</b> Dwarka, Boisar</p>
+          <p><b>Total Scrap Value:</b> ₹550</p>
+          <p><b>Status:</b> <span class="status completed">✅ Completed</span></p>
+        </div>
+
+        <div class="order-card">
+          <h3>Customer: Kajal</h3>
+          <p><b>Date:</b> 5 Aug 2025</p>
+          <p><b>Time Slot:</b> 11:00 AM - 1:00 PM</p>
+          <p><b>Address:</b> Rohini, Nallasopara</p>
+          <p><b>Total Scrap Value:</b> ₹300</p>
+          <p><b>Status:</b> <span class="status rejected">❌ Rejected</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="page-section">
+      <h2>👤 Vendor Profile</h2>
+      <p><b>Name:</b> Scrap Vendor Pvt Ltd</p>
+      <p><b>Location:</b> New Delhi</p>
+      <p><b>Contact:</b> +91 9876543210</p>
+    </section>
+  </div>
+<script>
+   function showSection(sectionId) {
+      // Hide all sections
+document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+      // Remove active class from navbar items
+document.querySelectorAll('.navbar ul li').forEach(li => li.classList.remove('active'));
+
+      // Show selected section
+document.getElementById(sectionId).classList.add('active');
+event.target.classList.add('active');
+}
+</script>
+  <script src="vendor.js" defer>
+    
+  </script>
 </body>
 </html>

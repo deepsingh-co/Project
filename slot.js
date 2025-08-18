@@ -38,10 +38,10 @@ document.querySelectorAll(".slot-card").forEach(slot => {
 });
 function confirmSlot() {
   const pickupDate = document.getElementById("pickupDate").value;
-  const addressNote = document.querySelector(".address-box").value;
+  const addressNote = document.getElementById("pickupAddress").value;
 
-  if (!pickupDate || !selectedSlot) {
-    alert("Please select both a date and a time slot.");
+  if (!pickupDate || !selectedSlot || !customerLat || !customerLng) {
+    alert("Please select a date, time slot, and a valid address.");
     return;
   }
 
@@ -59,3 +59,6 @@ window.onload = function () {
   const amount = localStorage.getItem("scrapAmount") || "0";
   document.getElementById("amountDisplay").textContent = amount;
 }
+
+
+
