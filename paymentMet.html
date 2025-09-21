@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Payment</title>
+  <link rel="stylesheet" href="paymentMet.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <div class="payment-wrapper">
+    <div class="payment-card">
+      <h1>💸 Complete Payment</h1>
+      <p class="tagline">Pay your customer securely and save the planet 🌍</p>
+
+      <!-- Amount Box -->
+      <div class="amount-box">
+        <span>Total Amount</span>
+        <h2 id="amountDisplay">₹500</h2>
+      </div>
+
+      <!-- Payment Method Tabs -->
+      <div class="tabs">
+        <button class="tab active" onclick="openTab('upi')">UPI</button>
+        <button class="tab" onclick="openTab('card')">Card</button>
+        <button class="tab" onclick="openTab('wallet')">Wallet</button>
+        <button class="tab" onclick="openTab('cod')">Cash on Delivery</button>
+      </div>
+
+      <!-- UPI -->
+      <div id="upi" class="tab-content active">
+        <input type="text" placeholder="Enter UPI ID (e.g. name@upi)">
+        <button class="pay-btn" id="upiPayBtn">Pay with UPI</button>
+      </div>
+
+      <!-- Card -->
+      <div id="card" class="tab-content">
+        <input type="text" placeholder="Card Number">
+        <input type="text" placeholder="MM/YY">
+        <input type="text" placeholder="CVV">
+        <button class="pay-btn" id="cardPayBtn">Pay with Card</button>
+      </div>
+
+      <!-- Wallet -->
+      <div id="wallet" class="tab-content">
+    <select>
+          <option>Select Wallet</option>
+          <option>Paytm</option>
+          <option>PhonePe</option>
+          <option>Amazon Pay</option>
+        </select>
+        <button class="pay-btn" id="walletPayBtn">Pay via Wallet</button>
+      </div>
+
+      <!-- COD -->
+      <div id="cod" class="tab-content">
+        <p>Pay directly in cash when scrap is picked up by vendor.</p>
+        <button class="pay-btn cod-btn" onclick="cashOnDelivery()">Confirm COD</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="paymentMet.js"></script>
+</body>
+</html>

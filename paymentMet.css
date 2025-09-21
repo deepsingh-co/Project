@@ -1,0 +1,118 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.payment-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 40px rgba(0,0,0,0.25);
+  text-align: center;
+  width: 400px;
+  color: #fff;
+  animation: slideUp 1s ease;
+}
+
+.payment-card h1 {
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+
+.tagline {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Amount */
+.amount-box {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+.amount-box span {
+  font-size: 13px;
+  opacity: 0.8;
+}
+.amount-box h2 {
+  margin: 8px 0 0;
+  font-size: 30px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.tab {
+  flex: 1;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.tab.active {
+  background: #fff;
+  color: #0072ff;
+  font-weight: 600;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+.tab-content.active {
+  display: flex;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Pay Button */
+.pay-btn {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #00c6ff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pay-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0,198,255,0.5);
+}
+
+.cod-btn {
+  background: #f1c40f;
+  color: #333;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
