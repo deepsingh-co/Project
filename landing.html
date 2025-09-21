@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scrap Uncle — Turn Waste into Wealth</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="landing.css">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+  <!-- Main JS (deferred) -->
+  <script src="landing.js" defer></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand" tabindex="0">
+        <div class="brand-mark">♻</div>
+        <div class="brand-text">Scrap <span>Uncle</span></div>
+      </div>
+
+      <nav class="nav">
+        <a href="#process">Process</a>
+        <a href="#why">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a class="cta-link" href="role.html">Get Started</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO / SLIDESHOW -->
+  <main>
+    <section class="hero-section">
+      <div class="hero-slideshow" aria-hidden="true">
+        <!-- slides are injected by JS for convenience -->
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="eyebrow">Trusted • Sustainable • Instant Payout</div>
+        <h1 class="hero-title">
+          Turning <span class="accent">Waste</span> into <span class="accent">Wealth</span>
+        </h1>
+        <p class="hero-sub">Sell scrap from your doorstep — customers earn instantly, vendors get quality supply, and cities get cleaner.</p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="role.html">Get Started</a>
+          <a class="btn ghost" href="#process">See How It Works</a>
+        </div>
+
+        <div class="hero-stats" aria-hidden="true">
+          <div><strong>12K+</strong><span>Pickups</span></div>
+          <div><strong>1.5K+ Tons</strong><span>Recycled</span></div>
+          <div><strong>4.9★</strong><span>Avg Rating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS TIMELINE -->
+    <section id="process" class="section process-section">
+      <div class="container section-inner">
+        <h2 class="section-title">Our Process — Simple & Transparent</h2>
+
+        <div class="timeline-wrap" aria-hidden="false">
+          <svg class="timeline-line" viewBox="0 0 1000 200" preserveAspectRatio="none" role="img" aria-hidden="true">
+            <path class="timeline-path" d="M40 100 L960 100" stroke="none" fill="none"></path>
+          </svg>
+
+          <div class="timeline-items">
+            <div class="timeline-item">
+              <div class="ti-icon"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=60&auto=format&fit=crop" alt="Book pickup"></div>
+              <div class="ti-body">
+                <h3>Customer Books Pickup</h3>
+                <p>Choose items, enter weight or estimate, and select a convenient slot.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="ti-icon"><img src="https://images.unsplash.com/photo-1526378720645-1b6a209b0b5f?w=800&q=60&auto=format&fit=crop" alt="Vendor notified"></div>
+              <div class="ti-body">
+                <h3>Vendor Accepts Order</h3>
+                <p>Nearby verified vendor accepts the order and prepares pickup.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="ti-icon"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=60&auto=format&fit=crop" alt="Pickup"></div>
+              <div class="ti-body">
+                <h3>Pickup & Verification</h3>
+                <p>Vendor collects scrap, weighs & verifies at pickup for transparent pricing.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="ti-icon"><img src="https://images.unsplash.com/photo-1581092795363-5a3aa3c0b7b8?w=800&q=60&auto=format&fit=crop" alt="Payment"></div>
+              <div class="ti-body">
+                <h3>Instant Payment</h3>
+                <p>Vendor pays the customer on the spot — easy, secure, and timely.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why" class="section why-section">
+      <div class="container section-inner split">
+        <div class="why-left">
+          <h2 class="section-title">Why Scrap Uncle?</h2>
+          <p class="lead">We built a trusted network that helps customers earn, supports vendor businesses, and reduces landfill waste.</p>
+
+          <ul class="why-list">
+            <li><strong>Fair Pricing</strong> — Transparent quotes and instant payout</li>
+            <li><strong>Verified Vendors</strong> — Background-checked & rated</li>
+            <li><strong>Eco Impact</strong> — Tracking recycled tonnage and local impact</li>
+          </ul>
+
+          <div class="why-cta">
+            <a class="btn primary" href="role.html">Start Selling Scrap</a>
+            <a class="btn ghost" href="#reviews">See Testimonials</a>
+          </div>
+        </div>
+
+        <div class="why-right">
+          <div class="why-visual">
+            <!-- decorative card stack -->
+            <div class="card big">
+              <img src="https://images.unsplash.com/photo-1547218551-5a6f42f38a5f?w=1200&q=60&auto=format&fit=crop" alt="recycle" />
+            </div>
+            <div class="card med">
+              <img src="https://images.unsplash.com/photo-1545060894-2e8b0f5f2cfe?w=1200&q=60&auto=format&fit=crop" alt="vendor" />
+            </div>
+            <div class="card small">
+              <img src="https://images.unsplash.com/photo-1532634896-26909d0d5a7a?w=1200&q=60&auto=format&fit=crop" alt="customer" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section reviews-section">
+      <div class="container section-inner">
+        <h2 class="section-title">What People Say</h2>
+
+        <div class="reviews-slider" aria-live="polite">
+          <button class="rev-prev" aria-label="Previous testimonial">‹</button>
+          <div class="rev-track">
+            <article class="rev-card">
+              <div class="rev-top">
+                <img class="avatar" src="https://i.pravatar.cc/100?img=3" alt="Amit">
+                <div>
+                  <h4>Amit Sharma</h4>
+                  <div class="rev-stars">★★★★★</div>
+                </div>
+              </div>
+              <p>"Quick, fair, and reliable. I got paid instantly at my doorstep. Highly recommend!"</p>
+            </article>
+
+            <article class="rev-card">
+              <div class="rev-top">
+                <img class="avatar" src="https://i.pravatar.cc/100?img=5" alt="Priya">
+                <div>
+                  <h4>Priya Verma</h4>
+                  <div class="rev-stars">★★★★★</div>
+                </div>
+              </div>
+              <p>"Vendors are professional and pickup is on time. The app is very convenient."</p>
+            </article>
+
+            <article class="rev-card">
+              <div class="rev-top">
+                <img class="avatar" src="https://i.pravatar.cc/100?img=8" alt="Rohit">
+                <div>
+                  <h4>Rohit Kumar</h4>
+                  <div class="rev-stars">★★★★★</div>
+                </div>
+              </div>
+              <p>"I feel good contributing to recycling — and earning in the process. Great initiative."</p>
+            </article>
+          </div>
+          <button class="rev-next" aria-label="Next testimonial">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact" class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Scrap Uncle</strong><br>
+          © 2025 — Made with ♻ and ❤️
+        </div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
